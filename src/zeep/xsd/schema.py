@@ -131,6 +131,7 @@ class Schema(object):
         :rtype: zeep.xsd.Group
 
         """
+        qname = self._create_qname(qname)
         return self._get_instance(qname, 'get_group', 'group')
 
     def get_attribute(self, qname):
